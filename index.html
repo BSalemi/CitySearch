@@ -33,14 +33,24 @@
                 })
             }
 
+            
+            function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            }
+
             function displayMatches(){
-                console.log(this.value, "value")
                 const matchResults = findMatches(this.value, cities)
+
                 const html = matchResults.map(place => {
+
+                    const regex = RegExp(this.value, 'gi'),
+                        cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`),
+                        stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`)
+
                    return `
                     <li>
                         <span class="name">${place.city}, ${place.state}</span> 
-                        <span class="population">${place.population}</span>
+                        <span class="population">${numberWithCommas(place.population)}</span>
                     </li>
                    `
                 }).join("");
