@@ -9,7 +9,9 @@ After cloning. `cd` into the directory and open it with your code editor. Once o
 
 ## Usage
 
-Upon launching the application, type your query into the search input box that reads `City or State`. As you type, the page will automatically display the U.S. cities and states that match your query.  
+Upon launching the application, type your query into the search input box that reads `City or State`. As you type, the page will automatically display the U.S. cities and states that match your query. 
+
+![CitySearch Example](https://i.imgur.com/LwmEc2r.png)
 
 ## Contribution 
 
